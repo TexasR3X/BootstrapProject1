@@ -1,7 +1,22 @@
-nav {
-    background: var(--bs-secondary-bg);
+$purple: var(--bs-purple);
+$white: #fff;
+
+body {
+    height: 100vh;
 }
 
-.blue {
-    color: var(--bs-primary);
+nav {
+    background: var(--bs-secondary-bg);
+    width: 100%;
+}
+
+.purple {
+    color: $purple;
+}
+button.purple {
+    background: $purple;
+    color: $white;
+    border: 0;
+    width: 200px;
+    border-radius: var(--bs-border-radius-xxl);
 }

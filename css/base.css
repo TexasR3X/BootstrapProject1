@@ -1,7 +1,20 @@
-nav {
-  background: var(--bs-secondary-bg);
+body {
+  height: 100vh;
 }
 
-.blue {
-  color: var(--bs-primary);
+nav {
+  background: var(--bs-secondary-bg);
+  width: 100%;
+}
+
+.purple {
+  color: var(--bs-purple);
+}
+
+button.purple {
+  background: var(--bs-purple);
+  color: #fff;
+  border: 0;
+  width: 200px;
+  border-radius: var(--bs-border-radius-xxl);
 }/*# sourceMappingURL=base.css.map */
