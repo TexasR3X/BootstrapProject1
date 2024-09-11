@@ -1,5 +1,7 @@
 body {
   height: 100vh;
+  background: #2e2e2e url(../binaryBackground.jpg);
+  color: #fff;
 }
 
 h1 {
