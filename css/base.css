@@ -2,9 +2,17 @@ body {
   height: 100vh;
 }
 
+h1 {
+  font-size: 40px;
+}
+
 nav {
   background: var(--bs-secondary-bg);
   width: 100%;
+}
+nav a {
+  text-decoration: none;
+  color: #2e2e2e;
 }
 
 .purple {
@@ -19,6 +27,14 @@ button.purple {
   border-radius: var(--bs-border-radius-xxl);
 }
 
-footer {
+button.purple:hover {
+  background: var(--bs-purple);
+  color: #fff;
+  border: 0;
+  width: 200px;
+  border-radius: var(--bs-border-radius-xxl);
+}
+
+footer, main {
   width: 100%;
 }/*# sourceMappingURL=base.css.map */

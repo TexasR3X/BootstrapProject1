@@ -1,19 +1,9 @@
 $purple: var(--bs-purple);
+$purpleLight: #ddd5ec;
 $white: #fff;
+$black: #2e2e2e;
 
-body {
-    height: 100vh;
-}
-
-nav {
-    background: var(--bs-secondary-bg);
-    width: 100%;
-}
-
-.purple {
-    color: $purple;
-}
-button.purple {
+@mixin purpleButton($color: $purple) {
     background: $purple;
     color: $white;
     border: 0;
@@ -21,6 +11,34 @@ button.purple {
     border-radius: var(--bs-border-radius-xxl);
 }
 
-footer {
+body {
+    height: 100vh;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+nav {
+    background: var(--bs-secondary-bg);
+    width: 100%;
+
+    a {
+        text-decoration: none;
+        color: $black;
+    }
+}
+
+.purple {
+    color: $purple;
+}
+button.purple {
+    @include purpleButton();
+}
+button.purple:hover {
+    @include purpleButton($color: $purpleLight);
+}
+
+footer, main {
     width: 100%;
 }
