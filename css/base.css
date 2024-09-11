@@ -1,16 +1,16 @@
 body {
   height: 100vh;
-  background: #2e2e2e url(../binaryBackground.jpg);
+  background: #2e2e2e url(../images/binaryBackground.jpg);
   color: #fff;
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
 }
 
-h1 {
-  font-size: 40px;
+h1.fs-1 {
+  font-size: calc(2rem + 2vw) !important;
 }
 
 nav {
   background: var(--bs-secondary-bg);
-  width: 100%;
 }
 nav a {
   text-decoration: none;
@@ -27,16 +27,22 @@ button.purple {
   border: 0;
   width: 200px;
   border-radius: var(--bs-border-radius-xxl);
+  transition: 0.5s;
+}
+@media screen and (max-width: 799px) {
+  button.purple {
+    height: 80px;
+    width: 300px;
+  }
+}
+@media screen and (min-width: 800px) {
+  button.purple {
+    height: 100px;
+    width: 375px;
+  }
 }
 
 button.purple:hover {
-  background: var(--bs-purple);
-  color: #fff;
-  border: 0;
-  width: 200px;
-  border-radius: var(--bs-border-radius-xxl);
-}
-
-footer, main {
-  width: 100%;
+  color: #ddd5ec;
+  opacity: 1;
 }/*# sourceMappingURL=base.css.map */

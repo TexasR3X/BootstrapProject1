@@ -13,17 +13,17 @@ $black: #2e2e2e;
 
 body {
     height: 100vh;
-    background: $black url(../binaryBackground.jpg);
+    background: $black url(../images/binaryBackground.jpg);
     color: $white;
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
 }
 
-h1 {
-    font-size: 40px;
+h1.fs-1 {
+    font-size: calc(2rem + 2vw) !important;
 }
 
 nav {
     background: var(--bs-secondary-bg);
-    width: 100%;
 
     a {
         text-decoration: none;
@@ -36,11 +36,19 @@ nav {
 }
 button.purple {
     @include purpleButton();
-}
-button.purple:hover {
-    @include purpleButton($color: $purpleLight);
+    transition: 0.5s;
+
+    @media screen and (max-width: 799px) {
+        height: 80px;
+        width: 300px;
+    }
+    @media screen and (min-width: 800px) {
+        height: 100px;
+        width: 375px;
+    }
 }
 
-footer, main {
-    width: 100%;
+button.purple:hover {
+    color: $purpleLight;
+    opacity: 1;
 }
