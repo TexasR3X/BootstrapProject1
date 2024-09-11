@@ -1,11 +1,11 @@
 body {
   height: 100vh;
-  background: #2e2e2e url(../images/binaryBackground.jpg);
+  background: #2e2e2e url(../images/binaryBackground.jpg) center top;
   color: #fff;
   font-family: Quicksand, Arial, Helvetica, sans-serif;
 }
 
-h1.fs-1 {
+.fs-1 {
   font-size: calc(2rem + 2vw) !important;
 }
 
@@ -15,6 +15,10 @@ nav {
 nav a {
   text-decoration: none;
   color: #2e2e2e;
+  transition: 0.5s;
+}
+nav a:hover {
+  font-weight: bold;
 }
 
 .purple {
@@ -25,24 +29,12 @@ button.purple {
   background: var(--bs-purple);
   color: #fff;
   border: 0;
-  width: 200px;
   border-radius: var(--bs-border-radius-xxl);
-  transition: 0.5s;
-}
-@media screen and (max-width: 799px) {
-  button.purple {
-    height: 80px;
-    width: 300px;
-  }
-}
-@media screen and (min-width: 800px) {
-  button.purple {
-    height: 100px;
-    width: 375px;
-  }
+  width: calc(300px + 12vw);
+  height: calc(70px + 4vw);
+  transition: filter 0.5s;
 }
 
 button.purple:hover {
-  color: #ddd5ec;
-  opacity: 1;
+  filter: brightness(1.4);
 }/*# sourceMappingURL=base.css.map */

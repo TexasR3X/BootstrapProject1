@@ -1,24 +1,16 @@
 $purple: var(--bs-purple);
-$purpleLight: #ddd5ec;
+$glow: brightness(1.4);
 $white: #fff;
 $black: #2e2e2e;
 
-@mixin purpleButton($color: $purple) {
-    background: $purple;
-    color: $white;
-    border: 0;
-    width: 200px;
-    border-radius: var(--bs-border-radius-xxl);
-}
-
 body {
     height: 100vh;
-    background: $black url(../images/binaryBackground.jpg);
+    background: $black url(../images/binaryBackground.jpg) center top;
     color: $white;
     font-family: Quicksand, Arial, Helvetica, sans-serif;
 }
 
-h1.fs-1 {
+.fs-1 {
     font-size: calc(2rem + 2vw) !important;
 }
 
@@ -28,27 +20,26 @@ nav {
     a {
         text-decoration: none;
         color: $black;
+        transition: 0.5s;
+    }
+    a:hover {
+        font-weight: bold;
     }
 }
 
 .purple {
     color: $purple;
 }
+
 button.purple {
-    @include purpleButton();
-    transition: 0.5s;
-
-    @media screen and (max-width: 799px) {
-        height: 80px;
-        width: 300px;
-    }
-    @media screen and (min-width: 800px) {
-        height: 100px;
-        width: 375px;
-    }
+    background: $purple;
+    color: $white;
+    border: 0;
+    border-radius: var(--bs-border-radius-xxl);
+    width: calc(300px + 12vw);
+    height: calc(70px + 4vw);
+    transition: filter 0.5s;
 }
-
 button.purple:hover {
-    color: $purpleLight;
-    opacity: 1;
+    filter: $glow;
 }
