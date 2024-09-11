@@ -17,4 +17,8 @@ button.purple {
   border: 0;
   width: 200px;
   border-radius: var(--bs-border-radius-xxl);
+}
+
+footer {
+  width: 100%;
 }/*# sourceMappingURL=base.css.map */
